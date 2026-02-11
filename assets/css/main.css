@@ -4154,3 +4154,14 @@ input, select, textarea {
 .coming-soon-icons span.icon {
   cursor: pointer;
 }
+ 
+/* Hace que el gith del footer parpadee */
+.highlight-github {
+  animation: githubFlash 1.2s ease-in-out 2;
+}
+
+@keyframes githubFlash {
+  0% { color: inherit; }
+  50% { color: #ffffff; transform: scale(1.2); }
+  100% { color: inherit; transform: scale(1); }
+}

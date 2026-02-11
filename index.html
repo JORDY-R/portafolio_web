@@ -75,7 +75,10 @@
 							<img src="images/foto_presentasion_portafolio.png" alt="Jordy Robles">
 						</span>
 
-						<a href="cv.pdf" class="button about-cv">Descargar CV</a>
+						<a href="assets/Jordy_Robles_Desarrollador_Web_CV.pdf" class="button about-cv" download>
+							Descargar CV
+						</a>
+
 					</div>
 
 					<div class="col-6 col-12-medium">
@@ -171,7 +174,7 @@
 
 				<!-- Proyecto 1 (antes era "destacado") -->
 				<article class="project-card project-card--featured">
-					<a class="project-card__img" href="#" target="_blank" rel="noopener">
+					<a class="project-card__img" rel="noopener">
 					<img src="images/proyecto_chatbot.png" alt="OdontoBot - Chatbot WhatsApp" />
 					</a>
 
@@ -192,7 +195,7 @@
 
 						<ul class="actions special project-actions">
 						<li><a href="#" class="button primary js-toggle-demo">VER DEMO</a></li>
-						<li><a href="#" class="button">GITHUB</a></li>
+						<li><a href="#footer"  class="button scrolly">GITHUB</a></li>
 						</ul>
 
 						<div class="demo-container" aria-hidden="true">
@@ -210,7 +213,7 @@
 
 				<!-- Proyecto 2 -->
 				<article class="project-card">
-					<a class="project-card__img" href="#">
+					<a class="project-card__img" >
 						<img src="images/proyecto_agenda.jpg" alt="Agenda médica web" />
 					</a>
 
@@ -227,7 +230,7 @@
 
 						<ul class="actions special project-actions">
 						<li><a href="#" class="button primary js-toggle-demo">VER DEMO</a></li>
-						<li><a href="#" class="button">GITHUB</a></li>
+						<li><a href="#footer"  class="button scrolly">GITHUB</a></li>
 						</ul>
 
 						<div class="demo-container" aria-hidden="true">
@@ -241,7 +244,7 @@
 
 				<!-- Proyecto 3 -->
 				<article class="project-card">
-					<a class="project-card__img" href="#">
+					<a class="project-card__img" >
 						<img src="images/proyecto_tienda_libros_ajedrez.jpg" alt="Landing e-commerce de libros de ajedrez" />
 					</a>
 
@@ -258,7 +261,7 @@
 
 						<ul class="actions special project-actions">
 						<li><a href="#" class="button primary js-toggle-demo">VER DEMO</a></li>
-						<li><a href="#" class="button">GITHUB</a></li>
+						<li><a href="#footer"  class="button scrolly">GITHUB</a></li>
 						</ul>
 
 						<div class="demo-container" aria-hidden="true">
@@ -526,6 +529,19 @@
 					});
 				});
 				});
+
+			// parpadee github del footer
+			document.querySelectorAll('a[href="#footer"]').forEach(link => {
+				link.addEventListener('click', function () {
+					const githubIcon = document.querySelector('#footer .fa-github');
+					githubIcon.classList.add('highlight-github');
+
+					setTimeout(() => {
+					githubIcon.classList.remove('highlight-github');
+					}, 2400);
+				});
+			});
+
 			</script>
 
 	</body>
